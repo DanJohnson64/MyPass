@@ -1,0 +1,149 @@
+[gd_scene load_steps=4 format=3 uid="uid://216oxlkxtwh4"]
+
+[ext_resource type="PackedScene" uid="uid://cuom60u37fowl" path="res://scenes/vault/ItemListPanel.tscn" id="1_7hlpt"]
+[ext_resource type="Script" uid="uid://uv68y2c611tg" path="res://scenes/vault_root/VaultRoot.gd" id="1_wlx7k"]
+[ext_resource type="StyleBox" uid="uid://dqccaput2wseh" path="res://ui/PanelTheme.tres" id="2_jmt0f"]
+
+[node name="VaultRoot" type="Control"]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+script = ExtResource("1_wlx7k")
+
+[node name="HeaderBar" type="Control" parent="."]
+layout_mode = 1
+anchor_right = 1.0
+anchor_bottom = 0.15
+grow_horizontal = 2
+
+[node name="TitleLabel" type="Label" parent="HeaderBar"]
+layout_mode = 1
+anchors_preset = -1
+anchor_left = 0.5
+anchor_top = 0.149
+anchor_right = 0.5
+anchor_bottom = 0.149
+offset_left = -320.0
+offset_top = -4.9120026
+offset_right = 320.0
+offset_bottom = 132.088
+grow_horizontal = 2
+theme_override_font_sizes/font_size = 100
+text = "MyPass Vault"
+
+[node name="EmailLabel" type="Label" parent="HeaderBar"]
+unique_name_in_owner = true
+visible = false
+layout_mode = 1
+anchors_preset = -1
+anchor_left = 0.20400001
+anchor_top = 0.625
+anchor_right = 0.24300002
+anchor_bottom = 0.92700005
+offset_left = -0.32000732
+offset_right = -0.44000244
+offset_bottom = 0.023986816
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_font_sizes/font_size = 40
+
+[node name="TypeFilter" type="OptionButton" parent="HeaderBar"]
+unique_name_in_owner = true
+custom_minimum_size = Vector2(400, 100)
+layout_mode = 1
+anchors_preset = -1
+anchor_left = 0.314
+anchor_top = 0.625
+anchor_right = 0.684
+anchor_bottom = 0.97200006
+offset_left = -0.120025635
+offset_right = 0.27996826
+offset_bottom = 0.06399536
+grow_horizontal = 2
+grow_vertical = 0
+theme_override_font_sizes/font_size = 40
+theme_override_styles/normal = ExtResource("2_jmt0f")
+
+[node name="ItemTypeLabel" type="Label" parent="HeaderBar"]
+layout_mode = 0
+offset_left = 423.0
+offset_top = 288.0
+offset_right = 661.0
+offset_bottom = 330.0
+theme_override_font_sizes/font_size = 30
+text = "Select Item Type"
+
+[node name="ContentArea" type="Control" parent="."]
+layout_mode = 1
+anchor_top = 0.15
+anchor_right = 1.0
+anchor_bottom = 0.85
+offset_right = -11.619995
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="ItemListPanel" parent="ContentArea" instance=ExtResource("1_7hlpt")]
+unique_name_in_owner = true
+layout_mode = 1
+
+[node name="BottomBar" type="Control" parent="."]
+layout_mode = 1
+anchor_top = 0.85
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="StatusLabel" type="Label" parent="BottomBar"]
+unique_name_in_owner = true
+layout_mode = 1
+anchors_preset = -1
+anchor_left = 0.512
+anchor_right = 0.512
+offset_left = -176.96002
+offset_right = 178.03998
+offset_bottom = 137.0
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_font_sizes/font_size = 70
+text = "0 Items"
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="AddItemButton" type="Button" parent="BottomBar"]
+unique_name_in_owner = true
+custom_minimum_size = Vector2(400, 100)
+layout_mode = 1
+anchors_preset = -1
+anchor_left = 0.038000003
+anchor_top = 0.37800002
+anchor_right = 0.63100004
+anchor_bottom = 0.851
+offset_left = -0.040000916
+offset_top = 0.13599396
+offset_right = -0.4800415
+offset_bottom = -7.0879974
+grow_horizontal = 2
+grow_vertical = 0
+theme_override_font_sizes/font_size = 50
+theme_override_styles/normal = ExtResource("2_jmt0f")
+text = "Create Vault Item"
+
+[node name="ReturnToLoginButton" type="Button" parent="BottomBar"]
+unique_name_in_owner = true
+layout_mode = 1
+anchors_preset = -1
+anchor_left = 0.78900003
+anchor_top = 0.37800002
+anchor_right = 0.78900003
+anchor_bottom = 0.37800002
+offset_left = -113.120056
+offset_top = 0.13599396
+offset_right = 113.879944
+offset_bottom = 129.13599
+theme_override_font_sizes/font_size = 50
+theme_override_styles/normal = ExtResource("2_jmt0f")
+text = "Logout"

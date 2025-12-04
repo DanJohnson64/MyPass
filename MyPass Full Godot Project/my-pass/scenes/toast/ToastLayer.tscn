@@ -1,0 +1,52 @@
+[gd_scene load_steps=3 format=3 uid="uid://d3v1sml54p7c7"]
+
+[ext_resource type="Script" uid="uid://dig0iy8rfc58i" path="res://scenes/toast/ToastLayer.gd" id="1_2ha30"]
+[ext_resource type="StyleBox" uid="uid://dqccaput2wseh" path="res://ui/PanelTheme.tres" id="2_8pmv7"]
+
+[node name="ToastLayer" type="Control"]
+z_index = 100
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+mouse_filter = 2
+script = ExtResource("1_2ha30")
+
+[node name="Toast" type="Control" parent="."]
+unique_name_in_owner = true
+layout_mode = 1
+anchor_left = 0.2
+anchor_top = 0.82500005
+anchor_right = 0.8
+anchor_bottom = 0.9
+offset_top = -0.00012207031
+mouse_filter = 2
+
+[node name="Background" type="Panel" parent="Toast"]
+unique_name_in_owner = true
+layout_mode = 1
+anchors_preset = -1
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+mouse_filter = 2
+theme_override_styles/panel = ExtResource("2_8pmv7")
+
+[node name="Label" type="Label" parent="Toast"]
+unique_name_in_owner = true
+layout_mode = 1
+anchors_preset = -1
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_colors/font_shadow_color = Color(0, 0, 0, 1)
+theme_override_colors/font_outline_color = Color(0, 0, 0, 1)
+theme_override_font_sizes/font_size = 50
+text = "Text will look like this"
+horizontal_alignment = 1
+vertical_alignment = 1
+autowrap_mode = 2

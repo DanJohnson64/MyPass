@@ -1,0 +1,73 @@
+[gd_scene load_steps=12 format=3 uid="uid://bfcnlo6nyjouc"]
+
+[ext_resource type="Script" uid="uid://hjnyuoyg14gs" path="res://scenes/main.gd" id="1_o5qli"]
+[ext_resource type="Shader" uid="uid://bo5p4jfv4ipyk" path="res://scenes/Main.gdshader" id="2_rvslj"]
+[ext_resource type="PackedScene" uid="uid://bqe6o2gvhw70s" path="res://scenes/auth/Auth.tscn" id="3_c01mt"]
+[ext_resource type="StyleBox" uid="uid://dqccaput2wseh" path="res://ui/PanelTheme.tres" id="3_jlsqs"]
+[ext_resource type="PackedScene" uid="uid://cbeicficveqpm" path="res://scenes/register/Register.tscn" id="4_nxtc6"]
+[ext_resource type="PackedScene" uid="uid://216oxlkxtwh4" path="res://scenes/vault_root/VaultRoot.tscn" id="5_jlsqs"]
+[ext_resource type="PackedScene" uid="uid://bl3meyn3ipcmc" path="res://scenes/recovery/Recovery.tscn" id="6_q8u5g"]
+[ext_resource type="PackedScene" uid="uid://d3v1sml54p7c7" path="res://scenes/toast/ToastLayer.tscn" id="7_nxtc6"]
+[ext_resource type="PackedScene" uid="uid://degps1jxhx4fm" path="res://scenes/vault/VaultItemEditor.tscn" id="9_lhr70"]
+[ext_resource type="PackedScene" uid="uid://cf6uveh0t8ujf" path="res://scenes/vault/SelectItemType.tscn" id="10_wp0k4"]
+
+[sub_resource type="ShaderMaterial" id="ShaderMaterial_0bbpv"]
+shader = ExtResource("2_rvslj")
+shader_parameter/speed = 1.0
+shader_parameter/size = 20.0
+
+[node name="Main" type="Control"]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+script = ExtResource("1_o5qli")
+
+[node name="ColorRect" type="ColorRect" parent="."]
+material = SubResource("ShaderMaterial_0bbpv")
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="Panel" type="Panel" parent="."]
+layout_mode = 1
+anchors_preset = -1
+anchor_left = 0.01
+anchor_top = 0.01
+anchor_right = 0.99
+anchor_bottom = 0.99
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_styles/panel = ExtResource("3_jlsqs")
+
+[node name="Auth" parent="." instance=ExtResource("3_c01mt")]
+visible = false
+layout_mode = 1
+
+[node name="Register" parent="." instance=ExtResource("4_nxtc6")]
+visible = false
+layout_mode = 1
+
+[node name="VaultRoot" parent="." instance=ExtResource("5_jlsqs")]
+visible = false
+layout_mode = 1
+
+[node name="Recovery" parent="." instance=ExtResource("6_q8u5g")]
+visible = false
+layout_mode = 1
+
+[node name="ToastLayer" parent="." instance=ExtResource("7_nxtc6")]
+layout_mode = 1
+
+[node name="VaultItemEditor" parent="." instance=ExtResource("9_lhr70")]
+visible = false
+layout_mode = 1
+
+[node name="SelectItemType" parent="." instance=ExtResource("10_wp0k4")]
+visible = false
+layout_mode = 1

@@ -1,0 +1,48 @@
+[gd_scene load_steps=3 format=3 uid="uid://cuom60u37fowl"]
+
+[ext_resource type="Script" uid="uid://7jcrgus3gdj5" path="res://scenes/vault/ItemListPanel.gd" id="1_r6oo1"]
+[ext_resource type="StyleBox" uid="uid://dqccaput2wseh" path="res://ui/PanelTheme.tres" id="2_mh2tm"]
+
+[node name="ItemListPanel" type="Control"]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+script = ExtResource("1_r6oo1")
+
+[node name="HeaderLabel" type="Label" parent="."]
+layout_mode = 1
+anchors_preset = -1
+anchor_top = 0.036000002
+anchor_right = 1.0
+anchor_bottom = 0.124000005
+offset_top = 0.87999725
+offset_bottom = 0.9199829
+theme_override_font_sizes/font_size = 60
+text = "Items
+"
+horizontal_alignment = 1
+
+[node name="Panel" type="Panel" parent="."]
+layout_mode = 1
+anchors_preset = -1
+anchor_top = 0.15
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_right = 8.0
+theme_override_styles/panel = ExtResource("2_mh2tm")
+
+[node name="ItemsScroll" type="ScrollContainer" parent="."]
+layout_mode = 1
+anchors_preset = -1
+anchor_top = 0.15
+anchor_right = 1.0
+anchor_bottom = 1.0
+
+[node name="ItemsVBox" type="VBoxContainer" parent="ItemsScroll"]
+unique_name_in_owner = true
+layout_mode = 2
+size_flags_horizontal = 3
+theme_override_constants/separation = 12

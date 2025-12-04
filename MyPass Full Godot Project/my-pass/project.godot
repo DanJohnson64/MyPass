@@ -1,0 +1,29 @@
+; Engine configuration file.
+; It's best edited using the editor UI and not directly,
+; since the parameters that go here are not all obvious.
+;
+; Format:
+;   [section] ; section goes between []
+;   param=value ; assign values to parameters
+
+config_version=5
+
+[application]
+
+config/name="MyPass"
+run/main_scene="uid://bfcnlo6nyjouc"
+config/features=PackedStringArray("4.5", "Forward Plus")
+
+[autoload]
+
+SessionManager="*res://autoloads/Session_Manager.gd"
+ClipboardGuard="*res://autoloads/Clipboard_Guard.gd"
+UIHub="*res://autoloads/UI_Hub.gd"
+VaultStore="*res://autoloads/Vault_Store.gd"
+SecurityWatcher="*res://autoloads/Security_Watcher.gd"
+
+[display]
+
+window/size/viewport_width=1080
+window/size/viewport_height=1920
+window/stretch/mode="viewport"

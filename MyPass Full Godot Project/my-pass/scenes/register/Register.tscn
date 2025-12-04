@@ -1,0 +1,331 @@
+[gd_scene load_steps=3 format=3 uid="uid://cbeicficveqpm"]
+
+[ext_resource type="Script" uid="uid://b8fkdwd7wm50x" path="res://scenes/register/Register.gd" id="1_5ykx6"]
+[ext_resource type="StyleBox" uid="uid://dqccaput2wseh" path="res://ui/PanelTheme.tres" id="2_s8id1"]
+
+[node name="Register" type="Control"]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+script = ExtResource("1_5ykx6")
+
+[node name="HeaderBar" type="Control" parent="."]
+layout_mode = 1
+anchor_right = 1.0
+anchor_bottom = 0.15
+offset_bottom = 8.0
+grow_horizontal = 2
+
+[node name="Label" type="Label" parent="HeaderBar"]
+layout_mode = 1
+anchors_preset = -1
+anchor_left = 0.518
+anchor_top = 0.179
+anchor_right = 0.518
+anchor_bottom = 0.179
+offset_left = -368.44
+offset_top = 0.01599884
+offset_right = 368.56
+offset_bottom = 137.01599
+grow_horizontal = 2
+theme_override_font_sizes/font_size = 100
+text = "Create Account"
+
+[node name="ContentArea" type="Control" parent="."]
+layout_mode = 1
+anchor_top = 0.15
+anchor_right = 1.0
+anchor_bottom = 0.85
+offset_right = -1.0
+
+[node name="FormPanel" type="Control" parent="ContentArea"]
+layout_mode = 1
+anchor_left = 0.2
+anchor_top = 0.05
+anchor_right = 0.8
+anchor_bottom = 0.95
+offset_right = 40.0
+offset_bottom = 40.0
+
+[node name="EmailLabel" type="Label" parent="ContentArea/FormPanel"]
+layout_mode = 1
+anchors_preset = -1
+anchor_left = 0.061000004
+anchor_top = -0.085
+anchor_right = 0.061000004
+anchor_bottom = -0.085
+offset_left = -66.731415
+offset_top = 0.015983582
+offset_right = 66.26859
+offset_bottom = 69.01598
+theme_override_font_sizes/font_size = 50
+text = "Email"
+
+[node name="EmailEdit" type="LineEdit" parent="ContentArea/FormPanel"]
+unique_name_in_owner = true
+custom_minimum_size = Vector2(500, 100)
+layout_mode = 1
+anchors_preset = -1
+anchor_left = 0.569
+anchor_top = -0.10700001
+anchor_right = 0.569
+anchor_bottom = -0.10700001
+offset_left = -249.93062
+offset_top = 0.50720215
+offset_right = 250.0694
+offset_bottom = 129.5072
+theme_override_font_sizes/font_size = 50
+theme_override_styles/normal = ExtResource("2_s8id1")
+placeholder_text = "Enter Email"
+
+[node name="PasswordLabel" type="Label" parent="ContentArea/FormPanel"]
+layout_mode = 1
+anchors_preset = -1
+anchor_left = -0.006
+anchor_top = 0.030000001
+anchor_right = -0.006
+anchor_bottom = 0.030000001
+offset_left = -116.675606
+offset_top = 0.31198883
+offset_right = 116.324394
+offset_bottom = 69.31199
+theme_override_font_sizes/font_size = 50
+text = "Password"
+
+[node name="PasswordEdit" type="LineEdit" parent="ContentArea/FormPanel"]
+unique_name_in_owner = true
+custom_minimum_size = Vector2(500, 100)
+layout_mode = 1
+anchors_preset = -1
+anchor_left = 0.569
+anchor_top = 0.008
+anchor_right = 0.569
+anchor_bottom = 0.008
+offset_left = -249.93062
+offset_top = -0.19681263
+offset_right = 250.0694
+offset_bottom = 128.80319
+theme_override_font_sizes/font_size = 50
+theme_override_styles/normal = ExtResource("2_s8id1")
+placeholder_text = "Choose Password"
+secret = true
+
+[node name="SecurityQuestionsLabel" type="Label" parent="ContentArea/FormPanel"]
+layout_mode = 1
+anchors_preset = -1
+anchor_left = 0.483
+anchor_top = 0.282
+anchor_right = 0.483
+anchor_bottom = 0.282
+offset_left = -452.8142
+offset_top = -0.58721924
+offset_right = 452.1858
+offset_bottom = 136.41278
+theme_override_font_sizes/font_size = 100
+text = "Security Questions"
+
+[node name="Question1Label" type="Label" parent="ContentArea/FormPanel"]
+unique_name_in_owner = true
+layout_mode = 1
+anchors_preset = -1
+anchor_left = 0.46500003
+anchor_top = 0.39100003
+anchor_right = 0.46500003
+anchor_bottom = 0.39100003
+offset_left = -164.44102
+offset_top = 15.20636
+offset_right = 164.55899
+offset_bottom = 84.20636
+theme_override_font_sizes/font_size = 50
+text = "What Is 1 + 1?"
+
+[node name="Question2Label" type="Label" parent="ContentArea/FormPanel"]
+unique_name_in_owner = true
+layout_mode = 1
+anchors_preset = -1
+anchor_left = 0.45900002
+anchor_top = 0.574
+anchor_right = 0.45900002
+anchor_bottom = 0.574
+offset_left = -271.31665
+offset_top = -0.47039795
+offset_right = 271.68338
+offset_bottom = 68.5296
+theme_override_font_sizes/font_size = 50
+text = "What Color Is The Sky?"
+
+[node name="Question3Label" type="Label" parent="ContentArea/FormPanel"]
+unique_name_in_owner = true
+layout_mode = 1
+anchors_preset = -1
+anchor_left = 0.48000002
+anchor_top = 0.74200004
+anchor_right = 0.48000002
+anchor_bottom = 0.74200004
+offset_left = -461.752
+offset_top = 0.5967407
+offset_right = 461.248
+offset_bottom = 69.5968
+theme_override_font_sizes/font_size = 50
+text = "What Is Your Favorite Class At UofMD?"
+
+[node name="Answer1Edit" type="LineEdit" parent="ContentArea/FormPanel"]
+unique_name_in_owner = true
+custom_minimum_size = Vector2(500, 100)
+layout_mode = 1
+anchors_preset = -1
+anchor_left = 0.47000003
+anchor_top = 0.45800003
+anchor_right = 0.47000003
+anchor_bottom = 0.45800003
+offset_left = -249.87804
+offset_top = 16.483154
+offset_right = 250.12198
+offset_bottom = 116.483154
+theme_override_font_sizes/font_size = 50
+theme_override_styles/normal = ExtResource("2_s8id1")
+
+[node name="Answer2Edit" type="LineEdit" parent="ContentArea/FormPanel"]
+unique_name_in_owner = true
+custom_minimum_size = Vector2(500, 100)
+layout_mode = 1
+anchors_preset = -1
+anchor_left = 0.47200003
+anchor_top = 0.648
+anchor_right = 0.47200003
+anchor_bottom = 0.648
+offset_left = -250.25282
+offset_top = 0.0592041
+offset_right = 249.7472
+offset_bottom = 100.059265
+theme_override_font_sizes/font_size = 50
+theme_override_styles/normal = ExtResource("2_s8id1")
+
+[node name="Answer3Edit" type="LineEdit" parent="ContentArea/FormPanel"]
+unique_name_in_owner = true
+custom_minimum_size = Vector2(500, 100)
+layout_mode = 1
+anchors_preset = -1
+anchor_left = 0.47000003
+anchor_top = 0.79800004
+anchor_right = 0.47000003
+anchor_bottom = 0.79800004
+offset_left = -249.87804
+offset_top = 24.619202
+offset_right = 250.12198
+offset_bottom = 124.6192
+theme_override_font_sizes/font_size = 50
+theme_override_styles/normal = ExtResource("2_s8id1")
+
+[node name="CreateButton" type="Button" parent="ContentArea/FormPanel"]
+unique_name_in_owner = true
+custom_minimum_size = Vector2(400, 90)
+layout_mode = 1
+anchors_preset = -1
+anchor_left = 0.47000003
+anchor_top = 1.021
+anchor_right = 0.47000003
+anchor_bottom = 1.021
+offset_left = -199.87804
+offset_top = -26.041626
+offset_right = 200.12198
+offset_bottom = 63.958374
+grow_horizontal = 2
+grow_vertical = 0
+theme_override_font_sizes/font_size = 50
+theme_override_styles/normal = ExtResource("2_s8id1")
+text = "Create Account"
+
+[node name="RegisterSuggestedPasswordEdit" type="LineEdit" parent="ContentArea/FormPanel"]
+unique_name_in_owner = true
+layout_mode = 1
+anchors_preset = -1
+anchor_left = 0.62100005
+anchor_top = 0.12900001
+anchor_right = 0.62100005
+anchor_bottom = 0.12900001
+offset_left = -285.67548
+offset_top = 0.60157776
+offset_right = 285.32455
+offset_bottom = 129.60158
+theme_override_font_sizes/font_size = 50
+theme_override_styles/read_only = ExtResource("2_s8id1")
+placeholder_text = "Suggested Password"
+editable = false
+
+[node name="RegisterGeneratePasswordButton" type="Button" parent="ContentArea/FormPanel"]
+unique_name_in_owner = true
+layout_mode = 1
+anchors_preset = -1
+anchor_left = -0.043
+anchor_top = 0.12900001
+anchor_right = -0.043
+anchor_bottom = 0.12900001
+offset_left = -140.2418
+offset_top = 0.60157776
+offset_right = 144.7582
+offset_bottom = 129.60158
+theme_override_font_sizes/font_size = 50
+theme_override_styles/normal = ExtResource("2_s8id1")
+text = "Generate"
+
+[node name="RegisterCopyPasswordButton" type="Button" parent="ContentArea/FormPanel"]
+unique_name_in_owner = true
+layout_mode = 1
+anchors_preset = -1
+anchor_left = 1.116
+anchor_top = 0.12900001
+anchor_right = 1.116
+anchor_bottom = 0.12900001
+offset_left = -54.938477
+offset_top = 0.60157776
+offset_right = 55.061523
+offset_bottom = 129.60158
+theme_override_font_sizes/font_size = 50
+theme_override_styles/normal = ExtResource("2_s8id1")
+text = "⧉"
+
+[node name="PasswordRevealButton" type="Button" parent="ContentArea/FormPanel"]
+unique_name_in_owner = true
+layout_mode = 1
+anchors_preset = 1
+anchor_left = 1.0
+anchor_right = 1.0
+offset_left = -46.200012
+offset_top = 9.799988
+offset_right = 82.79999
+offset_bottom = 138.79999
+grow_horizontal = 0
+theme_override_font_sizes/font_size = 50
+theme_override_styles/normal = ExtResource("2_s8id1")
+text = "👁"
+
+[node name="BottomBar" type="Control" parent="."]
+layout_mode = 1
+anchor_top = 0.85
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_right = -2.0
+offset_bottom = -5.0
+
+[node name="BackButton" type="Button" parent="BottomBar"]
+unique_name_in_owner = true
+custom_minimum_size = Vector2(400, 90)
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -200.0
+offset_top = -45.0
+offset_right = 200.0
+offset_bottom = 45.0
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_font_sizes/font_size = 50
+theme_override_styles/normal = ExtResource("2_s8id1")
+text = "Return To Login"

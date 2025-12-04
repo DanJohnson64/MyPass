@@ -1,0 +1,16 @@
+[gd_resource type="StyleBoxFlat" format=3 uid="uid://dqccaput2wseh"]
+
+[resource]
+bg_color = Color(0.1305108, 0.1778079, 0.20658064, 0.8392157)
+border_width_left = 30
+border_width_top = 30
+border_width_right = 30
+border_width_bottom = 30
+border_color = Color(2.7915835e-06, 0.4767645, 0.37159458, 1)
+border_blend = true
+corner_radius_top_left = 40
+corner_radius_top_right = 40
+corner_radius_bottom_right = 40
+corner_radius_bottom_left = 40
+shadow_color = Color(0, 0, 0, 0.25490198)
+shadow_offset = Vector2(8.135, 15.415)

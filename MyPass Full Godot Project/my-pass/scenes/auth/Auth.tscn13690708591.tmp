@@ -1,0 +1,192 @@
+[gd_scene load_steps=3 format=3 uid="uid://bqe6o2gvhw70s"]
+
+[ext_resource type="Script" uid="uid://dkhhn3no2ive0" path="res://scenes/auth/Auth.gd" id="1_4s2nf"]
+[ext_resource type="StyleBox" uid="uid://dqccaput2wseh" path="res://ui/PanelTheme.tres" id="2_6ewkk"]
+
+[node name="Auth" type="Control"]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+script = ExtResource("1_4s2nf")
+
+[node name="HeaderArea" type="Control" parent="."]
+layout_mode = 1
+anchors_preset = 10
+anchor_right = 1.0
+offset_left = 32.0
+offset_top = 40.0
+offset_right = -32.0
+offset_bottom = 160.0
+grow_horizontal = 2
+
+[node name="Panel" type="Panel" parent="HeaderArea"]
+layout_mode = 1
+anchors_preset = 5
+anchor_left = 0.5
+anchor_right = 0.5
+offset_left = -400.0
+offset_right = 400.0
+offset_bottom = 130.0
+grow_horizontal = 2
+theme_override_styles/panel = ExtResource("2_6ewkk")
+
+[node name="HeaderLabel" type="Label" parent="HeaderArea"]
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -320.0
+offset_top = -68.5
+offset_right = 320.0
+offset_bottom = 68.5
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_font_sizes/font_size = 100
+text = "MyPass Vault"
+
+[node name="FormArea" type="Control" parent="."]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_left = 32.0
+offset_top = 170.0
+offset_right = -32.0
+offset_bottom = -960.0
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="EmailLabel" type="Label" parent="FormArea"]
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -400.0
+offset_top = -68.0
+offset_right = -318.0
+offset_bottom = -24.0
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_font_sizes/font_size = 31
+text = "Email"
+
+[node name="PasswordLabel" type="Label" parent="FormArea"]
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -400.0
+offset_top = 57.0
+offset_right = -256.0
+offset_bottom = 101.0
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_font_sizes/font_size = 31
+text = "Password"
+
+[node name="HBoxContainer" type="VBoxContainer" parent="FormArea"]
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -34.0
+offset_top = -20.0
+offset_right = 106.0
+offset_bottom = 46.0
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_constants/separation = 24
+
+[node name="EmailEdit" type="LineEdit" parent="FormArea/HBoxContainer"]
+unique_name_in_owner = true
+custom_minimum_size = Vector2(500, 100)
+layout_mode = 2
+size_flags_horizontal = 4
+theme_override_font_sizes/font_size = 50
+theme_override_styles/normal = ExtResource("2_6ewkk")
+placeholder_text = "Enter Email"
+
+[node name="PasswordEdit" type="LineEdit" parent="FormArea/HBoxContainer"]
+unique_name_in_owner = true
+custom_minimum_size = Vector2(500, 100)
+layout_mode = 2
+theme_override_font_sizes/font_size = 50
+theme_override_styles/normal = ExtResource("2_6ewkk")
+placeholder_text = "Enter Password"
+
+[node name="PasswordToggleButton" type="Button" parent="FormArea"]
+unique_name_in_owner = true
+layout_mode = 1
+anchors_preset = -1
+anchor_left = 0.845
+anchor_top = 0.532
+anchor_right = 0.845
+anchor_bottom = 0.532
+offset_left = -64.52002
+offset_top = -0.27999878
+offset_right = 64.47998
+offset_bottom = 128.72
+theme_override_font_sizes/font_size = 50
+theme_override_styles/normal = ExtResource("2_6ewkk")
+text = "👁"
+
+[node name="ButtonArea" type="Control" parent="."]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_left = 32.0
+offset_top = 960.0
+offset_right = -32.0
+offset_bottom = -40.0
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="ButtonVBox" type="VBoxContainer" parent="ButtonArea"]
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -20.0
+offset_top = -20.0
+offset_right = 20.0
+offset_bottom = 20.0
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="LoginButton" type="Button" parent="ButtonArea/ButtonVBox"]
+unique_name_in_owner = true
+custom_minimum_size = Vector2(800, 140)
+layout_mode = 2
+theme_override_font_sizes/font_size = 50
+theme_override_styles/normal = ExtResource("2_6ewkk")
+text = "Log In"
+
+[node name="RegisterButton" type="Button" parent="ButtonArea/ButtonVBox"]
+unique_name_in_owner = true
+custom_minimum_size = Vector2(800, 140)
+layout_mode = 2
+theme_override_font_sizes/font_size = 50
+theme_override_styles/normal = ExtResource("2_6ewkk")
+text = "Register"
+
+[node name="RecoveryButton" type="Button" parent="ButtonArea/ButtonVBox"]
+unique_name_in_owner = true
+custom_minimum_size = Vector2(800, 140)
+layout_mode = 2
+theme_override_font_sizes/font_size = 50
+theme_override_styles/normal = ExtResource("2_6ewkk")
+text = "Forgot Password"
